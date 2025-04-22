@@ -61,7 +61,7 @@ public class TextMoodAnalyzer {
         return new String(Files.readAllBytes(Paths.get(filePath))).toLowerCase();
     }
 
-    private static int calculateMoodScore(String text) {
+    static int calculateMoodScore(String text) {
         int positiveCount = 0;
         int negativeCount = 0;
 
@@ -96,7 +96,7 @@ public class TextMoodAnalyzer {
         return false;
     }
 
-    private static String interpretMood(int moodScore) {
+    static String interpretMood(int moodScore) {
         if (moodScore > 10) {
             return "Очень позитивное";
         } else if (moodScore > 3) {
